@@ -1,6 +1,7 @@
 {
-    "name": "Tópicos de Filosofia",
-    "short_name": "Filosofia",
+    "id": "disciplinas",
+    "name": "Disciplinas",
+    "short_name": "Disciplinas",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#121212",

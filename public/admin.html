@@ -57,8 +57,20 @@
                 <div class="form-group">
                     <label>Categoria</label>
                     <select id="topicoCategoria" required></select>
-                    <label>Nome</label>
-                    <input type="text" id="topicoNome" required>
+                </div>
+                <div class="form-group">
+                    <label>Questão</label>
+                    <input type="text" id="topicoQuestao" required>
+                </div>
+                <div class="form-group">
+                    <label>Conteúdo</label>
+                    <textarea id="topicoConteudo" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Tags</label>
+                    <div id="topicoTagsList" class="tags-selection">
+                        <!-- Checkboxes for tags -->
+                    </div>
                 </div>
                 <div class="form-actions">
                     <button type="button" class="btn-cancel" onclick="closeModal('topicoModal')">Cancelar</button>
@@ -68,31 +80,17 @@
         </div>
     </div>
 
-    <div id="topicModal" class="modal hidden">
+    <div id="tagModal" class="modal hidden">
         <div class="modal-content">
-            <h2 id="topicModalTitle">Novo Tópico</h2>
-            <form id="topicForm">
-                <input type="hidden" id="topicId">
+            <h2 id="tagModalTitle">Nova Tag</h2>
+            <form id="tagForm">
+                <input type="hidden" id="tagId">
                 <div class="form-group">
-                    <label>Categoria</label>
-                    <select id="topicCategoria" required></select>
-                </div>
-                <div class="form-group">
-                    <label>Questão</label>
-                    <input type="text" id="topicQuestao" required>
-                </div>
-                <div class="form-group">
-                    <label>Tópico</label>
-                    <textarea id="topicTopico" required></textarea>
-                </div>
-                <div class="form-group">
-                    <label>Tags</label>
-                    <div id="topicTagsList" class="tags-selection">
-                        <!-- Checkboxes for tags -->
-                    </div>
+                    <label>Nome</label>
+                    <input type="text" id="tagNome" required>
                 </div>
                 <div class="form-actions">
-                    <button type="button" class="btn-cancel" onclick="closeModal('topicModal')">Cancelar</button>
+                    <button type="button" class="btn-cancel" onclick="closeModal('tagModal')">Cancelar</button>
                     <button type="submit" class="btn-save">Salvar</button>
                 </div>
             </form>

@@ -249,7 +249,7 @@ window.openTagModal = () => {
 if (tagForm) {
     tagForm.addEventListener('submit', async (e) => {
         e.preventDefault();
-        const nome = document.getElementById('tagName').value;
+        const nome = document.getElementById('tagNome').value;
 
         const result = await sendData('/tags', 'POST', { nome });
 
