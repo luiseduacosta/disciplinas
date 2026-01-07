@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="admin.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#121212">
+</head>
+
+<body>
+    <div id="app">
+        <header>
+            <h1>Painel de Administração</h1>
+            <nav class="admin-nav">
+                <button id="navCategorias" class="admin-nav-btn active">Categorias</button>
+                <button id="navTopicos" class="admin-nav-btn">Tópicos</button>
+                <button id="navTags" class="admin-nav-btn">Tags</button>
+                <a href="index.html" class="admin-nav-link">Voltar ao App</a>
+            </nav>
+        </header>
+
+        <main id="adminContent">
+            <!-- Dynamic Content will satisfy -->
+        </main>
+    </div>
+
+    <!-- Modals -->
+    <div id="categoriaModal" class="modal hidden">
+        <div class="modal-content">
+            <h2 id="categoriaModalTitle">Nova Categoria</h2>
+            <form id="categoriaForm">
+                <input type="hidden" id="categoriaId">
+                <div class="form-group">
+                    <label>Nome</label>
+                    <input type="text" id="categoriaNome" required>
+                </div>
+                <div class="form-group">
+                    <label>Descrição</label>
+                    <textarea id="categoriaDescricao"></textarea>
+                </div>
+                <div class="form-actions">
+                    <button type="button" class="btn-cancel" onclick="closeModal('categoriaModal')">Cancelar</button>
+                    <button type="submit" class="btn-save">Salvar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div id="topicoModal" class="modal hidden">
+        <div class="modal-content">
+            <h2 id="topicoModalTitle">Novo Tópico</h2>
+            <form id="topicoForm">
+                <input type="hidden" id="topicoId">
+                <div class="form-group">
+                    <label>Categoria</label>
+                    <select id="topicoCategoria" required></select>
+                    <label>Nome</label>
+                    <input type="text" id="topicoNome" required>
+                </div>
+                <div class="form-actions">
+                    <button type="button" class="btn-cancel" onclick="closeModal('topicoModal')">Cancelar</button>
+                    <button type="submit" class="btn-save">Salvar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div id="topicModal" class="modal hidden">
+        <div class="modal-content">
+            <h2 id="topicModalTitle">Novo Tópico</h2>
+            <form id="topicForm">
+                <input type="hidden" id="topicId">
+                <div class="form-group">
+                    <label>Categoria</label>
+                    <select id="topicCategoria" required></select>
+                </div>
+                <div class="form-group">
+                    <label>Questão</label>
+                    <input type="text" id="topicQuestao" required>
+                </div>
+                <div class="form-group">
+                    <label>Tópico</label>
+                    <textarea id="topicTopico" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Tags</label>
+                    <div id="topicTagsList" class="tags-selection">
+                        <!-- Checkboxes for tags -->
+                    </div>
+                </div>
+                <div class="form-actions">
+                    <button type="button" class="btn-cancel" onclick="closeModal('topicModal')">Cancelar</button>
+                    <button type="submit" class="btn-save">Salvar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="admin.js"></script>
+</body>
+
+</html>
