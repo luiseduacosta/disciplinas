@@ -243,6 +243,8 @@ app.delete('/api/topicos/:id/tags/:tag_id', (req, res) => {
 });
 
 // Start server
-app.listen(PORT, () => {
-    console.log(`Server running on port ${PORT}`);
+app.listen(PORT, '0.0.0.0', () => {
+    console.log(`Server is running!`);
+    console.log(`- Local:   http://localhost:${PORT}`);
+    console.log(`- Network: http://192.168.3.6:${PORT}`);
 });
