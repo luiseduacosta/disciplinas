@@ -109,7 +109,7 @@ async function renderTopicoDetalhes() {
         return;
     }
 
-    const tagsHtml = topico.tags ? topico.tags.map(tag => `<span class="tag">#${tag}</span>`).join('') : '';
+    const tagsHtml = topico.tags ? topico.tags.map(tag => `<span class="tag">#${tag.nome}</span>`).join('') : '';
 
     mainContent.innerHTML = `
         <div class="topic-detail">
